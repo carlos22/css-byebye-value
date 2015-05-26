@@ -30,7 +30,7 @@ npm install postcss-discard-empty postcss-discard-comments https://github.com/ca
 ```js
 var postcss = require('postcss');
 var input = '.mySelector a { color: $var; border: 1px solid red; } h1 { font-weight: bold; }';
-console.log(postcss([require('css-filter-by-value')({valuesToKeep: ['$var']}), require('postcss-discard-empty')(), require('postcss-discard-comments')({removeAll: true})]).process(input).css);
+console.log(postcss([require('postcss-discard-comments')({removeAll: true}), require('css-filter-by-value')({valuesToKeep: ['$var']}), require('postcss-discard-empty')()]).process(input).css);
 ```
 
 ### Result
