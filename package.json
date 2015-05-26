@@ -1,0 +1,30 @@
+{
+  "name": "css-byebye-value",
+  "version": "0.0.1",
+  "description": "Remove the CSS rules that you don't want, with a list of values. Useful to keep only declarations which using a variable for example",
+  "homepage": "https://github.com/AoDev/css-byebye",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AoDev/css-byebye.git"
+  },
+  "main": "lib/css-byebye-value.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "keywords": [
+    "css, byebye, remove, value"
+  ],
+  "author": "Karl Glatz <karl@glatz.biz>",
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^4.1.11"
+  },
+  "devDependencies": {
+    "chai": "^1.9.1",
+    "grunt": "^0.4.5",
+    "grunt-bump": "0.0.16",
+    "grunt-mocha-test": "^0.12.0",
+    "load-grunt-tasks": "^0.6.0",
+    "mocha": "^1.21.4"
+  }
+}
