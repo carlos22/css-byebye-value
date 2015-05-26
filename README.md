@@ -2,9 +2,12 @@ CSS Filter by Value
 ===================
 
 This [postcss](https://github.com/postcss/postcss) plugin removes all declarations which does not have a certain *value*.
-Afterwards it removes all empty rules (selectors).
 
 Based on [CSS Byebye](https://github.com/AoDev/css-byebye).
+
+To cleanup the result use
+* [postcss-discard-empty](https://github.com/ben-eb/postcss-discard-empty)
+* [postcss-discard-comments](https://github.com/ben-eb/postcss-discard-comments)
 
 ## Example
 
@@ -20,10 +23,14 @@ h1 {
 ```
 
 ### Code
+```sh
+npm install postcss-discard-empty postcss-discard-comments https://github.com/carlos22/css-filter-by-value.git --save
+```
+
 ```js
 var postcss = require('postcss');
 var input = '.mySelector a { color: $var; border: 1px solid red; } h1 { font-weight: bold; }';
-console.log(postcss([require('css-filter-by-value')({valuesToKeep: ['$var']})]).process(input).css);
+console.log(postcss([require('css-filter-by-value')({valuesToKeep: ['$var']}), require('postcss-discard-empty')(), require('postcss-discard-comments')({removeAll: true})]).process(input).css);
 ```
 
 ### Result
