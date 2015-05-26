@@ -1,5 +1,5 @@
-CSS Byebye Value
-================
+CSS Filter by Value
+===================
 
 This [postcss](https://github.com/postcss/postcss) plugin removes all declarations which does not have a certain *value*.
 Afterwards it removes all empty rules (selectors).
@@ -23,7 +23,7 @@ h1 {
 ```js
 var postcss = require('postcss');
 var input = '.mySelector a { color: $var; border: 1px solid red; } h1 { font-weight: bold; }';
-console.log(postcss([require('css-byebye-value')({valuesToKeep: ['$var']})]).process(input).css);
+console.log(postcss([require('css-filter-by-value')({valuesToKeep: ['$var']})]).process(input).css);
 ```
 
 ### Result

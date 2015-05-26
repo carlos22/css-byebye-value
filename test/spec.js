@@ -1,13 +1,13 @@
 var assert = require('assert');
 var postcss = require('postcss');
-var cssbyebyevaluePlugin = require('../lib/css-byebye-value');
+var cssbyebyevaluePlugin = require('../lib/css-filter-by-value');
 
 function cssbybyeProcess(css, opts) {
     return postcss([cssbyebyevaluePlugin(opts)]).process(css);
 };
 
 
-describe('cssbyebyevalue', function () {
+describe('css-filter-by-value', function () {
 
     it('should remove ruleset(s) with a selector that contains any of the given selectors to remove ', function (done) {
 

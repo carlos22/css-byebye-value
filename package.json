@@ -1,13 +1,13 @@
 {
-  "name": "css-byebye-value",
+  "name": "css-filter-by-value",
   "version": "0.0.1",
   "description": "Remove the CSS rules that you don't want, with a list of values. Useful to keep only declarations which using a variable for example",
   "homepage": "https://github.com/AoDev/css-byebye",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AoDev/css-byebye.git"
+    "url": "https://github.com/carlos22/css-filter-by-value.git"
   },
-  "main": "lib/css-byebye-value.js",
+  "main": "lib/css-filter-by-value.js",
   "scripts": {
     "test": "grunt test"
   },
