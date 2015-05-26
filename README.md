@@ -1,10 +1,10 @@
 CSS Byebye Value
 ================
 
-This (postcss)[https://github.com/postcss/postcss] plugin removes all declarations which does not have a certain *value*.
+This [postcss](https://github.com/postcss/postcss) plugin removes all declarations which does not have a certain *value*.
 Afterwards it removes all empty rules (selectors).
 
-Based on (CSS Byebye)[https://github.com/AoDev/css-byebye].
+Based on [CSS Byebye](https://github.com/AoDev/css-byebye).
 
 ## Example
 
