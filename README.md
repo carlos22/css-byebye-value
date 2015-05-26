@@ -35,7 +35,7 @@ console.log(postcss([require('css-filter-by-value')({valuesToKeep: ['$var']})]).
 
 ## Options
 
-`valuesToKeep` - Array of values which declarations should be kept. Can be a regex.
+`valuesToKeep` - Array of values which declarations should be kept. Can be a regex (optional). By default all variables starting with $ are extracted
 
 ## License
 

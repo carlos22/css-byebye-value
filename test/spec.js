@@ -14,7 +14,7 @@ describe('css-filter-by-value', function () {
         var css = 'a { font-size: $some-value; } .hello .h1 { background: $brand_color} .world { color: blue }';
         var declValuesToKeep = ['$some-value', '$brand_color'];
         var expected = 'a { font-size: $some-value; } .hello .h1 { background: $brand_color}';
-        var result = cssbybyeProcess(css, {valuesToKeep: declValuesToKeep, map: false});
+        var result = cssbybyeProcess(css, {valuesToKeep: declValuesToKeep});
 
         assert.strictEqual(result.css, expected);
         done();
@@ -25,7 +25,17 @@ describe('css-filter-by-value', function () {
         var css = '.item {} .item .desc { background: red } .list .item { color: $some_color; border: 1px solid red; }';
         var declValuesToKeep = [/\$[0-9A-Za-z-_]/];
         var expected = '.list .item { color: $some_color; }';
-        var result = cssbybyeProcess(css, {valuesToKeep: declValuesToKeep, map: false});
+        var result = cssbybyeProcess(css, {valuesToKeep: declValuesToKeep});
+
+        assert.strictEqual(result.css, expected);
+        done();
+    });
+
+    it('should filter for all $ vars by default', function (done) {
+
+        var css = '.item {} .item .desc { background: red } .list .item { color: $some_color; border: 1px solid $brand; }';
+        var expected = '.list .item { color: $some_color; border: 1px solid $brand; }';
+        var result = cssbybyeProcess(css);
 
         assert.strictEqual(result.css, expected);
         done();
